@@ -27,6 +27,9 @@ export const WelcomePage: React.FC<IWelcomePage> = ({
       <Text style={styles.welcomeUserText}> Hello, {welcomeUser}.</Text>
       {/* Total Balance */}
       <View style={styles.balanceContainer}>
+      <ImageBackground
+          source={require('../../assets/images/Track/Masks.png')}
+          style={{ left: 1.5, right: 1, marginBottom: 20, borderRadius: 20}}>
         <Text style={styles.totalBalanceText}>Total Balance</Text>
         <View style={styles.totalContainer}>
           <Text style={styles.totalBalance}> ₦{totalBalance}</Text>
@@ -41,6 +44,7 @@ export const WelcomePage: React.FC<IWelcomePage> = ({
             </Text>
           </TouchableOpacity>
         </View>
+        </ImageBackground>
       </View>
       {/* TRACK YOUR BILL  */}
       <View style={styles.TrackContainer}>
@@ -53,9 +57,7 @@ export const WelcomePage: React.FC<IWelcomePage> = ({
           }}>
           Track your Waybill
         </Text>
-        <ImageBackground
-          source={require('../../assets/images/Track/Masks.png')}
-          style={{ top: 10, right: 1, marginBottom: 0 }}>
+        
           <View style={styles.trackInputContainer}>
             <Ionicons
               name='search'
@@ -74,7 +76,6 @@ export const WelcomePage: React.FC<IWelcomePage> = ({
               </Text>
             </TouchableOpacity>
           </View>
-        </ImageBackground>
       </View>
 
       {/* SEND A PACKAGE */}
@@ -106,7 +107,7 @@ export const WelcomePage: React.FC<IWelcomePage> = ({
           <View style={styles.cardImageContainer}>
             <ImageBackground
               source={require('../../assets/images/road/Road1.png')}
-              style={{ top: 10, right: 1, marginBottom: 0 }}>
+              style={{ top: 20, right: 1, }}>
               <Image
                 source={require('../../assets/images/card/lorry.png')}
                 style={styles.cardImage}
