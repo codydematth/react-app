@@ -1,21 +1,26 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  TextInput,
+  TouchableOpacity,
+} from 'react-native';
 import RegistrationButtons from './RegistrationButtons';
 import PhoneInput from 'react-native-phone-number-input';
 import Logo from '../header/Logo';
 
 interface ISignIn {
-  emailValue? : string
+  emailValue?: string;
 }
-const SignIn: React.FC <ISignIn> = ( emailValue) => {
-
-  const  [email, setEmail] = useState('');
-  const onchange = emailValue => setEmail(emailValue);
+const SignIn: React.FC<ISignIn> = (emailValue) => {
+  const [email, setEmail] = useState('');
+  const onchange = (emailValue) => setEmail(emailValue);
   return (
     <View style={styles.home}>
       {/* LOGO */}
-      <Logo/>
-      
+      <Logo />
+
       <View>
         <Text
           style={{
@@ -50,10 +55,9 @@ const SignIn: React.FC <ISignIn> = ( emailValue) => {
           textContentType='password'
           secureTextEntry={true}
           maxLength={16}
-        
         />
       </View>
-      
+
       <View>
         <Text
           style={{
@@ -62,7 +66,7 @@ const SignIn: React.FC <ISignIn> = ( emailValue) => {
             paddingTop: 24,
             color: '#46BA7F',
             fontSize: 16,
-            textDecorationLine: 'underline'
+            textDecorationLine: 'underline',
           }}>
           Create an Account
         </Text>
@@ -74,10 +78,25 @@ const SignIn: React.FC <ISignIn> = ( emailValue) => {
           paddingTop: 20,
           justifyContent: 'space-between',
         }}>
-        <TouchableOpacity style={{backgroundColor: '#46BA7F', marginHorizontal: 'auto', justifyContent: 'center', paddingVertical: 20, paddingHorizontal: 45, borderRadius:20, marginTop: 50}}>
-            <Text style={{fontSize: 16, fontWeight: 'bold', textAlign: 'center', color:'#fff'}}> 
-                Sign In 
-            </Text>
+        <TouchableOpacity
+          style={{
+            backgroundColor: '#46BA7F',
+            marginHorizontal: 'auto',
+            justifyContent: 'center',
+            paddingVertical: 20,
+            paddingHorizontal: 45,
+            borderRadius: 20,
+            marginTop: 50,
+          }}>
+          <Text
+            style={{
+              fontSize: 16,
+              fontWeight: 'bold',
+              textAlign: 'center',
+              color: '#fff',
+            }}>
+            Sign In
+          </Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -86,7 +105,6 @@ const SignIn: React.FC <ISignIn> = ( emailValue) => {
 
 export default SignIn;
 
-
 const styles = StyleSheet.create({
   home: {
     backgroundColor: '#95afaf41',
@@ -94,7 +112,7 @@ const styles = StyleSheet.create({
     paddingTop: 40,
     flex: 1,
     padding: 20,
-    fontFamily: 'Poppins'
+    fontFamily: 'Poppins',
   },
   textLabel: {
     fontSize: 16,

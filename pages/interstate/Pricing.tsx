@@ -40,7 +40,7 @@ const Pricing: React.FC<IPricing> = ({ amount, discount }) => {
     },
   ];
 
-  const lastCell = pricingData[3] 
+  const lastCell = pricingData[3];
   return (
     <View style={styles.container}>
       {/* Start Scroll View */}
@@ -90,7 +90,11 @@ const Pricing: React.FC<IPricing> = ({ amount, discount }) => {
               return (
                 <View key={pricingData.id} style={styles.pricingTable}>
                   <Text style={styles.pricingTableText}> {packageName} </Text>
-                  <Text style={[{right: 70, position: 'absolute' }, styles.pricingTableText]}>
+                  <Text
+                    style={[
+                      { right: 70, position: 'absolute' },
+                      styles.pricingTableText,
+                    ]}>
                     {price}
                   </Text>
                 </View>
@@ -102,11 +106,9 @@ const Pricing: React.FC<IPricing> = ({ amount, discount }) => {
       {/* End Scroll View */}
 
       {/* Button */}
-      <View style={{marginTop: 70}}>
-        <PaymentModal/>
+      <View style={{ marginTop: 70 }}>
+        <PaymentModal />
       </View>
-      
-
     </View>
   );
 };
@@ -199,6 +201,5 @@ const styles = StyleSheet.create({
   pricingNameTable: {
     flexDirection: 'row',
     paddingHorizontal: 15,
-    
-  }
+  },
 });

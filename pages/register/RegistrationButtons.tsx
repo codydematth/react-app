@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 interface IButtons {
   title?: string;
   bgColor?: string;
-  color? : string;
+  color?: string;
 }
 
 const RegistrationButtons: React.FC<IButtons> = ({ title, bgColor, color }) => {
@@ -18,9 +18,10 @@ const RegistrationButtons: React.FC<IButtons> = ({ title, bgColor, color }) => {
         <Text
           style={[
             {
-            color: color},
-            styles.buttonDefaultText
-        ]}>
+              color: color,
+            },
+            styles.buttonDefaultText,
+          ]}>
           {title}
         </Text>
       </TouchableOpacity>
@@ -33,7 +34,7 @@ export default RegistrationButtons;
 RegistrationButtons.defaultProps = {
   title: 'Success',
   bgColor: '#46BA7F',
-  color: 'white'
+  color: 'white',
 };
 
 const styles = StyleSheet.create({

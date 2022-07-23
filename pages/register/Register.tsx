@@ -13,8 +13,8 @@ const Register: React.FC<IRegister> = ({ name, email, phone }) => {
   return (
     <View style={styles.home}>
       {/* LOGO */}
-      <Logo/>
-      
+      <Logo />
+
       <View>
         <Text
           style={{
@@ -51,11 +51,14 @@ const Register: React.FC<IRegister> = ({ name, email, phone }) => {
         <PhoneInput
           defaultCode='NG'
           layout='first'
-          containerStyle={[styles.phoneInput, {  width: 'auto', height: 20}]}
-          textContainerStyle={{ paddingVertical: 0, marginRight: 30, borderRadius: 20, backgroundColor: '#fff' }}
-          textInputStyle={{width: 100, height: 25}}
-          
-          
+          containerStyle={[styles.phoneInput, { width: 'auto', height: 20 }]}
+          textContainerStyle={{
+            paddingVertical: 0,
+            marginRight: 30,
+            borderRadius: 20,
+            backgroundColor: '#fff',
+          }}
+          textInputStyle={{ width: 100, height: 25 }}
         />
       </View>
       <View>

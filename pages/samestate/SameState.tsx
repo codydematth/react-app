@@ -23,111 +23,136 @@ const SameState = () => {
   // ];
   return (
     <View style={styles.container}>
-        <ScrollView>
-      {/* Close Icon */}
-      <View style={{ flexDirection: 'row', padding: 15 }}>
-        <Ionicons
-          name='close'
-          size={40}
-          color='black'
-          style={{ position: 'absolute' }}
-        />
-        <Text style={styles.bookingText}> Quick Booking</Text>
-      </View>
-
-      {/* Delivery Information */}
-      <View style={{ paddingTop: 30,  marginHorizontal: 20 }}>
-        <Text style={{ fontSize: 18, fontWeight: 'bold' }}>
-          Delivery Information
-        </Text>
-      </View>
-      <TouchableOpacity style={styles.selectContainer}>
-        <Text style={styles.textInputSelect}>Delivery Location</Text>
-        <Ionicons
-          name='chevron-forward-sharp'
-          size={18}
-          style={{ marginRight: 30 }}
-        />
-      </TouchableOpacity>
-
-      {/* Form Inputs */}
-      <View style={{ marginHorizontal: 15 }}>
-        <Text style={styles.textLabel}> Reciever's name</Text>
-        <TextInput style={styles.textInput} />
-      </View>
-
-      <View style={{ marginHorizontal: 15 }}>
-        <Text style={styles.textLabel}> Receiver's phone number</Text>
-        <TextInput style={styles.textInput} />
-      </View>
-
-      {/* Sender Information */}
-      <View style={{ paddingTop: 30, paddingLeft: 10, marginHorizontal: 15 }}>
-        <Text style={{ fontSize: 18, fontWeight: 'bold' }}>
-          Sender's Information
-        </Text>
-      </View>
-      {/* Sender Details with Edit Icon */}
-      <View style={styles.inputContainer}>
-        <View>
-          <Text style={styles.textLabel}> Name</Text>
-          <View style={[{ flexDirection: 'row', justifyContent: 'space-between'}, styles.textInput]}>
-            <Text style={{ paddingLeft: 15, marginVertical: 'auto', color: '#1F1F1F' }}>
-              John Doe
-            </Text>
-            <Image
-              source={require('../../assets/images/sameStateIcon/edit.png')}
-              style={styles.cardImage}
-              resizeMode='cover'
-            />
-          </View>
+      <ScrollView>
+        {/* Close Icon */}
+        <View style={{ flexDirection: 'row', padding: 15 }}>
+          <Ionicons
+            name='close'
+            size={40}
+            color='black'
+            style={{ position: 'absolute' }}
+          />
+          <Text style={styles.bookingText}> Quick Booking</Text>
         </View>
 
-        <View>
-          <Text style={styles.textLabel}> Phone number</Text>
-          <View style={[{ flexDirection: 'row', justifyContent: 'space-between' }, styles.textInput]}>
-            <Text style={{ paddingLeft: 15, marginVertical: 'auto', color: '#1F1F1F' }}>
-            +2348108960610
-            </Text>
-            <Image
-              source={require('../../assets/images/sameStateIcon/edit.png')}
-              style={styles.cardImage}
-              resizeMode='cover'
-            />
+        {/* Delivery Information */}
+        <View style={{ paddingTop: 30, marginHorizontal: 20 }}>
+          <Text style={{ fontSize: 18, fontWeight: 'bold' }}>
+            Delivery Information
+          </Text>
+        </View>
+        <TouchableOpacity style={styles.selectContainer}>
+          <Text style={styles.textInputSelect}>Delivery Location</Text>
+          <Ionicons
+            name='chevron-forward-sharp'
+            size={18}
+            style={{ marginRight: 30 }}
+          />
+        </TouchableOpacity>
+
+        {/* Form Inputs */}
+        <View style={{ marginHorizontal: 15 }}>
+          <Text style={styles.textLabel}> Reciever's name</Text>
+          <TextInput style={styles.textInput} />
+        </View>
+
+        <View style={{ marginHorizontal: 15 }}>
+          <Text style={styles.textLabel}> Receiver's phone number</Text>
+          <TextInput style={styles.textInput} />
+        </View>
+
+        {/* Sender Information */}
+        <View style={{ paddingTop: 30, paddingLeft: 10, marginHorizontal: 15 }}>
+          <Text style={{ fontSize: 18, fontWeight: 'bold' }}>
+            Sender's Information
+          </Text>
+        </View>
+        {/* Sender Details with Edit Icon */}
+        <View style={styles.inputContainer}>
+          <View>
+            <Text style={styles.textLabel}> Name</Text>
+            <View
+              style={[
+                { flexDirection: 'row', justifyContent: 'space-between' },
+                styles.textInput,
+              ]}>
+              <Text
+                style={{
+                  paddingLeft: 15,
+                  marginVertical: 'auto',
+                  color: '#1F1F1F',
+                }}>
+                John Doe
+              </Text>
+              <Image
+                source={require('../../assets/images/sameStateIcon/edit.png')}
+                style={styles.cardImage}
+                resizeMode='cover'
+              />
+            </View>
+          </View>
+
+          <View>
+            <Text style={styles.textLabel}> Phone number</Text>
+            <View
+              style={[
+                { flexDirection: 'row', justifyContent: 'space-between' },
+                styles.textInput,
+              ]}>
+              <Text
+                style={{
+                  paddingLeft: 15,
+                  marginVertical: 'auto',
+                  color: '#1F1F1F',
+                }}>
+                +2348108960610
+              </Text>
+              <Image
+                source={require('../../assets/images/sameStateIcon/edit.png')}
+                style={styles.cardImage}
+                resizeMode='cover'
+              />
+            </View>
+          </View>
+          <View>
+            <Text style={styles.textLabel}> Email address</Text>
+            <View
+              style={[
+                { flexDirection: 'row', justifyContent: 'space-between' },
+                styles.textInput,
+              ]}>
+              <Text
+                style={{
+                  paddingLeft: 15,
+                  marginVertical: 'auto',
+                  color: '#1F1F1F',
+                }}>
+                johndoe@gmail.com
+              </Text>
+              <Image
+                source={require('../../assets/images/sameStateIcon/edit.png')}
+                style={styles.cardImage}
+                resizeMode='cover'
+              />
+            </View>
           </View>
         </View>
-        <View>
-          <Text style={styles.textLabel}> Email address</Text>
-          <View style={[{ flexDirection: 'row', justifyContent: 'space-between' }, styles.textInput]}>
-            <Text style={{ paddingLeft: 15, marginVertical: 'auto', color: '#1F1F1F'}}>
-            johndoe@gmail.com
-            </Text>
-            <Image
-              source={require('../../assets/images/sameStateIcon/edit.png')}
-              style={styles.cardImage}
-              resizeMode='cover'
-            />
-          </View>
-        </View>
-      </View>
-      {/* Pickup Location */}
-      <TouchableOpacity style={styles.selectContainer}>
-        <Text style={styles.textInputSelect}>Pick-up Location</Text>
-        <Ionicons
-          name='chevron-forward-sharp'
-          size={18}
-          style={{ marginRight: 30 }}
-        />
-      </TouchableOpacity>
+        {/* Pickup Location */}
+        <TouchableOpacity style={styles.selectContainer}>
+          <Text style={styles.textInputSelect}>Pick-up Location</Text>
+          <Ionicons
+            name='chevron-forward-sharp'
+            size={18}
+            style={{ marginRight: 30 }}
+          />
+        </TouchableOpacity>
 
-      {/* Button */}
+        {/* Button */}
 
-      <TouchableOpacity style={styles.btnContainer}>
-        <Text style={styles.btnText}>Get Quote</Text>
-      </TouchableOpacity>
-
-
-    </ScrollView>
+        <TouchableOpacity style={styles.btnContainer}>
+          <Text style={styles.btnText}>Get Quote</Text>
+        </TouchableOpacity>
+      </ScrollView>
       {/* <PaymentModal/> */}
     </View>
   );
@@ -198,7 +223,7 @@ const styles = StyleSheet.create({
   cardImage: {
     width: 20,
     height: 20,
-    marginRight: 20
+    marginRight: 20,
   },
   inputContainer: {
     marginHorizontal: 15,
